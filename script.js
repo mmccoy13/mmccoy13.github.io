@@ -43,10 +43,12 @@ if (capDashboard) {
     remainingNode.textContent = formatMoney(Math.abs(remaining));
 
     if (remaining >= 0) {
+      remainingNode.style.color = "";
       statusNode.textContent = `${formatMoney(remaining)} remaining under the internal cap`;
       statusNode.className = "status-ok";
     } else {
-      statusNode.textContent = `${formatMoney(Math.abs(remaining))} over the internal cap`;
+      remainingNode.style.color = "#ef4444";
+      statusNode.textContent = `OVER CAP: ${formatMoney(Math.abs(remaining))}`;
       statusNode.className = "status-over";
     }
 
