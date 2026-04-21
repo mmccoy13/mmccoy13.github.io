@@ -30,6 +30,15 @@
       </div>
     </header>
 
+    <div class="status-bar">
+      <div class="status-bar-inner">
+        <span class="status-indicator"><span class="status-dot"></span>System Live</span>
+        <span>Connected to Portal API</span>
+        <span>Last Sync: 2 mins ago</span>
+        <span>Active Roster: 105/105</span>
+      </div>
+    </div>
+
     <main>
       <div class="container">
         <section class="page-hero">
@@ -150,27 +159,41 @@
               <h2>Performance value vs. culture value</h2>
             </div>
           </div>
-          <div class="matrix">
-            <div class="matrix-cell">
+          <div class="matrix-panel">
+            <div class="matrix-axis-x">
+              <span>Lower Culture Fit</span>
+              <span>Higher Culture Fit</span>
+            </div>
+            <div class="matrix-axis-y">
+              <span>Higher Performance Value</span>
+              <span>Lower Performance Value</span>
+            </div>
+            <div class="matrix">
+            <div class="matrix-cell matrix-high-high">
               <h3>High Performance / High Culture</h3>
               <hr>
               <p>Immediate retention priority with internal cap protection.</p>
+              <span class="matrix-kicker">Core retention</span>
             </div>
-            <div class="matrix-cell">
+            <div class="matrix-cell matrix-high-low">
               <h3>High Performance / Lower Culture</h3>
               <hr>
               <p>Short-term value play that requires fit scrutiny.</p>
+              <span class="matrix-kicker">Conditional hold</span>
             </div>
-            <div class="matrix-cell">
+            <div class="matrix-cell matrix-low-high">
               <h3>Lower Performance / High Culture</h3>
               <hr>
               <p>Depth leader and continuity piece worth targeted support.</p>
+              <span class="matrix-kicker">Culture preserve</span>
             </div>
-            <div class="matrix-cell">
+            <div class="matrix-cell matrix-low-low">
               <h3>Lower Performance / Lower Culture</h3>
               <hr>
               <p>Replaceable segment with limited retention urgency.</p>
+              <span class="matrix-kicker">Exit risk</span>
             </div>
+          </div>
           </div>
         </section>
       </div>
