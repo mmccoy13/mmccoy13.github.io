@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visuals + Tools | GM Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">GM Dashboard</span>
+          <span class="brand-sub">SPAD 498 roster and revenue-sharing framework</span>
+        </a>
+        <button class="nav-toggle" data-nav-toggle aria-expanded="false" aria-label="Toggle navigation">Menu</button>
+        <nav class="nav-links" data-nav>
+          <a href="index.html">Home</a>
+          <a href="problem.html">The Problem</a>
+          <a href="gm-framework.html">GM Operating System</a>
+          <a href="roster-model.html">Roster Model</a>
+          <a href="nil-retention.html">NIL + Retention</a>
+          <a class="active" href="visuals-tools.html">Visuals + Tools</a>
+          <a href="executive-summary.html">Executive Summary</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <section class="page-hero">
+          <div>
+            <span class="eyebrow">Interactive boards</span>
+            <h1>The GM toolkit turns the framework into decisions, not just theory.</h1>
+            <p class="lead">This page focuses on visual boards and a live cap simulator so the operating model feels closer to a real front-office dashboard.</p>
+          </div>
+        </section>
+
+        <section class="visual" data-cap-dashboard>
+          <div class="section-head">
+            <div>
+              <p class="tag">$22M cap allocation dashboard</p>
+              <h2>Simulate distribution across the four tiers</h2>
+            </div>
+            <p class="muted">Adjust the sliders to model different internal allocation strategies across a 105-man roster.</p>
+          </div>
+          <div class="cap-dashboard">
+            <div class="slider-group">
+              <div class="slider-card">
+                <div class="slider-head">
+                  <strong>Tier 1 | Elite Impact</strong>
+                  <span class="slider-meta" data-tier-amount></span>
+                </div>
+                <input type="range" min="0" max="12" step="0.5" value="8" data-tier-slider>
+                <div class="cap-row">
+                  <span>Premium rev-share + endorsements</span>
+                  <span data-tier-percent></span>
+                </div>
+              </div>
+              <div class="slider-card">
+                <div class="slider-head">
+                  <strong>Tier 2 | High Snap Count</strong>
+                  <span class="slider-meta" data-tier-amount></span>
+                </div>
+                <input type="range" min="0" max="10" step="0.5" value="7" data-tier-slider>
+                <div class="cap-row">
+                  <span>Standard internal contracts</span>
+                  <span data-tier-percent></span>
+                </div>
+              </div>
+              <div class="slider-card">
+                <div class="slider-head">
+                  <strong>Tier 3 | Development</strong>
+                  <span class="slider-meta" data-tier-amount></span>
+                </div>
+                <input type="range" min="0" max="6" step="0.5" value="4" data-tier-slider>
+                <div class="cap-row">
+                  <span>Base rev-share + incentives</span>
+                  <span data-tier-percent></span>
+                </div>
+              </div>
+              <div class="slider-card">
+                <div class="slider-head">
+                  <strong>Tier 4 | Culture / Depth</strong>
+                  <span class="slider-meta" data-tier-amount></span>
+                </div>
+                <input type="range" min="0" max="4" step="0.5" value="2" data-tier-slider>
+                <div class="cap-row">
+                  <span>Depth stability and educational support</span>
+                  <span data-tier-percent></span>
+                </div>
+              </div>
+            </div>
+            <div class="cap-summary">
+              <div class="cap-card">
+                <span class="tag">Allocation visual</span>
+                <div data-cap-pie style="width: 220px; height: 220px; border-radius: 50%; margin: 0 auto;"></div>
+              </div>
+              <div class="cap-total">
+                <span class="tag">Internal budget tracker</span>
+                <strong data-total></strong>
+                <div class="cap-row">
+                  <span>Target budget</span>
+                  <span>$22,000,000</span>
+                </div>
+                <div class="cap-row">
+                  <span>Difference</span>
+                  <span data-remaining></span>
+                </div>
+                <div style="margin-top: 0.7rem;" data-status></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="visual">
+          <div class="section-head">
+            <div>
+              <p class="tag">Roster heat map</p>
+              <h2>Visualized position-group pressure</h2>
+            </div>
+          </div>
+          <div class="heat-grid">
+            <div class="heat-card heat-stable">
+              <h3>Green | Stable</h3>
+              <hr>
+              <p>QB, RB, Interior DL</p>
+            </div>
+            <div class="heat-card heat-watch">
+              <h3>Yellow | Transfer Risk</h3>
+              <hr>
+              <p>WR, Safety, Tight End</p>
+            </div>
+            <div class="heat-card heat-need">
+              <h3>Red | Immediate Need</h3>
+              <hr>
+              <p>Cornerback, Offensive Tackle, Edge</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="visual">
+          <div class="section-head">
+            <div>
+              <p class="tag">Retention priority board</p>
+              <h2>Performance value vs. culture value</h2>
+            </div>
+          </div>
+          <div class="matrix">
+            <div class="matrix-cell">
+              <h3>High Performance / High Culture</h3>
+              <hr>
+              <p>Immediate retention priority with internal cap protection.</p>
+            </div>
+            <div class="matrix-cell">
+              <h3>High Performance / Lower Culture</h3>
+              <hr>
+              <p>Short-term value play that requires fit scrutiny.</p>
+            </div>
+            <div class="matrix-cell">
+              <h3>Lower Performance / High Culture</h3>
+              <hr>
+              <p>Depth leader and continuity piece worth targeted support.</p>
+            </div>
+            <div class="matrix-cell">
+              <h3>Lower Performance / Lower Culture</h3>
+              <hr>
+              <p>Replaceable segment with limited retention urgency.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <span>Visuals + Tools</span>
+        <span>Interactive boards and dashboard-style planning views</span>
+      </div>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
